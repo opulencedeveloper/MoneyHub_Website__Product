@@ -54,7 +54,7 @@ const chartData = [
 
 const SectionTwo = () => {
   return (
-    <section className="px-10 pt-24 pb-10">
+    <section className="px-5 pt-24 pb-10 md:px-10">
       <div className="font-semibold text-4xl text-center md:text-5xl">
         Why You Should Use
       </div>

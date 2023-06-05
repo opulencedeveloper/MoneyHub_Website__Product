@@ -32,7 +32,7 @@ const MainNavigation = () => {
     }
   };
   return (
-    <nav className="flex px-10 text-white pt-7 justify-between absolute w-full z-10">
+    <nav className="flex px-5 text-white pt-7 justify-between absolute w-full z-10 md:px-10">
       <Portal>
         <div
           className={`fixed inset-y-0 -left-64 z-50 w-64 shadow-lg transform ${

@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const SectionThree = () => {
   return (
-    <form className="relative px-6 pt-20 pb-20 mx-10 mt-40 mb-32 flex flex-col items-center text-white rounded-2xl bg-primary md:mx-36">
+    <form className="relative px-6 pt-20 pb-20 mx-5 mt-40 mb-32 flex flex-col items-center text-white rounded-2xl bg-primary md:mx-36">
       <Image
         height={631}
         width={1115}
         src="/images/worldmap.svg"
-        className="border absolute top-0 left-0 right-0 bottom-0  h-full w-full"
+        className="border top-0 left-0 right-0 bottom-0  h-full w-full"
       />
       <div className="font-bold text-3xl md:text-4xl">Contact Us</div>
       <div className="text-lg mt-1 md:text-xl text-center">

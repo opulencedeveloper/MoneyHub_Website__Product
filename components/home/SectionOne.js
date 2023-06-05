@@ -7,8 +7,8 @@ const profileImages = ["profile1", "profile2", "profile3", "profile4"];
 
 const SectionOne = () => {
   return (
-    <div className="relative flex flex-col pl-10 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 lg:flex-row lg:h-screen lg:space-y-0 ">
-      <div className="w-full space-y-8 pr-10 lg:w-1/2 md:pr-auto">
+    <div className="relative flex flex-col pl-5 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 md:pl-10 lg:flex-row lg:h-screen lg:space-y-0 ">
+      <div className="w-full space-y-8 pr-5 lg:w-1/2 md:pr-auto md:pr-10"> 
         <div className="text-5xl font-medium md:text-7xl">
           Let us manage your  <span className="text-secondary">finance</span> for you
         </div>
