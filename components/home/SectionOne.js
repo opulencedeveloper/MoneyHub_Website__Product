@@ -34,7 +34,7 @@ const SectionOne = () => {
               );
             })}
           </div>
-          <div className="font-medium text-sm lg:text-lg">
+          <div className="font-medium text-sm lg:text-xl">
             20,000 Active users
           </div>
         </div>

@@ -54,17 +54,17 @@ const chartData = [
 
 const SectionTwo = () => {
   return (
-    <section className="px-10 pt-16 pb-10">
+    <section className="px-10 pt-24 pb-10">
       <div className="font-semibold text-4xl text-center md:text-5xl">
         Why You Should Use
       </div>
       <div className="font-semibold text-4xl text-center text-secondary mb-3 text- md:text-5xl">
         MoneyHub
       </div>
-      <div className="text-secondary2 text-center text-xl pt-3 mb-24 md:text-2xl">
-        MoneyHub is a fas growing platform
+      <div className="text-secondary2 text-center text-xl pt-3 mb-20 md:text-2xl">
+        MoneyHub is a fast growing platform
       </div>
-      <div className="flex flex-col space-y-10 space-x-auto mb-40 lg:flex-row lg:space-x-48 lg:space-y-0">
+      <div className="flex flex-col space-y-10 space-x-auto mb-40 lg:flex-row lg:space-x-32 lg:space-y-0 xl:space-x-48">
         {sectionContent.map((content, index) => (
           <div key={index} className="space-y-2">
             <div className="font-semibold text-4xl text-secondary3 md:text-5xl">

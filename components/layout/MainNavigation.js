@@ -35,7 +35,7 @@ const MainNavigation = () => {
     <nav className="flex px-10 text-white pt-7 justify-between absolute w-full z-10">
       <Portal>
         <div
-          className={`fixed inset-y-0 -left-64 z-50 w-64 bg-custom1 shadow-lg transform ${
+          className={`fixed inset-y-0 -left-64 z-50 w-64 shadow-lg transform ${
             isOpen ? "translate-x-full" : "translate-x-0"
           } transition-transform duration-300 ease-in-out`}
         >
