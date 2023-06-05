@@ -1,34 +1,66 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import Portal from "../UI/Portal";
+import MobileNavigation from "./MobileNavigation";
+import { useRouter } from "next/router";
 
 const linkContent = [
   { title: "Home", link: "/" },
-  { title: "About", link: "/" },
-  { title: "Pricing", link: "/" },
-  { title: "Blogs", link: "/" },
+  { title: "About", link: "" },
+  { title: "Pricing", link: "" },
+  { title: "Blogs", link: "" },
 ];
+let navAnimationClass = "";
 
 const MainNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false); 
+  const router = useRouter();
+  const activeLink = router.pathname; 
+
+  const toggleDrawer = () => {
+    if (isOpen) {
+      navAnimationClass = "";
+      setIsOpen((prevExpenses) => {
+        return !prevExpenses;
+      });
+    } else {
+      navAnimationClass = "open";
+      setIsOpen((prevExpenses) => {
+        return !prevExpenses;
+      });
+    }
+  };
   return (
     <nav className="flex px-10 text-white pt-7 justify-between absolute w-full z-10">
+      <Portal>
+        <div
+          className={`fixed inset-y-0 -left-64 z-50 w-64 bg-custom1 shadow-lg transform ${
+            isOpen ? "translate-x-full" : "translate-x-0"
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <MobileNavigation toggleDrawer={toggleDrawer} />
+        </div>
+      </Portal>
       <div className="flex items-center space-x-2">
-        <div className="flex items-center justify-center text-white rounded-full h-8 w-8 bg-primary2 h-14 w-14 text-2xl lg:text-4xl">
+        <div className="flex items-center justify-center text-white rounded-full h-8 w-8 bg-primary2 text-2xl md:text-4xl md:h-14 md:w-14">
           I
         </div>
         <h1 className="font-medium text-lg">Money Hub</h1>
       </div>
       <div className="hidden lg:flex items-center space-x-14 ml-32 ">
         {linkContent.map((content, index) => (
-          <div className="flex flex-col items-center">
-            <Link className="text-xl" key={index} href={content.link}>
+          <div className="flex flex-col items-center" key={index}>
+            <Link className="text-xl" href={content.link}>
               {content.title}
             </Link>
-            <Image
+           { (activeLink === content.link) && <Image
               src="/images/icon/underline.svg"
+              alt="underline-icon"
               className="w-14 h-2"
-              width={72}
-              height={8}
-            />
+              width={14}
+              height={2}
+            />}
           </div>
         ))}
       </div>
@@ -42,6 +74,15 @@ const MainNavigation = () => {
           Sign Up
         </Link>
       </div>
+      <button
+          className={`${navAnimationClass} block hamburger mt-7 lg:hidden focus:outline-none`}
+          type="button"
+          onClick={toggleDrawer}
+        >
+          <span className="hamburger-top"></span>
+          <span className="hamburger-middle"></span>
+          <span className="hamburger-bottom"></span>
+        </button>
     </nav>
   );
 };

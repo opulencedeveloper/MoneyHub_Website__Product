@@ -7,12 +7,12 @@ const profileImages = ["profile1", "profile2", "profile3", "profile4"];
 
 const SectionOne = () => {
   return (
-    <section className="absolute flex flex-col pl-10 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 lg:flex-row lg:h-screen lg:space-y-auto ">
+    <div className="relative flex flex-col pl-10 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 lg:flex-row lg:h-screen lg:space-y-0 ">
       <div className="w-full space-y-8 pr-10 lg:w-1/2 md:pr-auto">
         <div className="text-5xl font-medium md:text-7xl">
-          Let us manage your finance for you
+          Let us manage your  <span className="text-secondary">finance</span> for you
         </div>
-        <div className="text-lg font-medium">
+        <div className="font-medium text-xl md:text-2xl">
           This is the easiest way to secure your finance, manage and view your
           income and expenses
         </div>
@@ -23,6 +23,8 @@ const SectionOne = () => {
               return (
                 <Image
                   key={index}
+                  loading="eager"
+                  priority
                   src={`/images/${profile}.svg`}
                   alt="profile images"
                   className={`h-auto w-auto ${margin}`}
@@ -37,10 +39,10 @@ const SectionOne = () => {
           </div>
         </div>
         <div className="flex font-medium space-x-5">
-          <Link href="/" className="py-2 px-5 bg-secondary">
+          <Link href="/" className="py-3 px-6 text-lg bg-secondary md:text-xl">
             Get Started
           </Link>
-          <Link href="/" className="text-secondary py-2 px-5">
+          <Link href="/" className="py-3 px-6 text-lg text-secondary text-xl py-2 px-5 md:text-xl">
             Try Demo
           </Link>
         </div>
@@ -64,7 +66,7 @@ const SectionOne = () => {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
