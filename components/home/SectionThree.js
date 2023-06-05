@@ -7,7 +7,7 @@ const SectionThree = () => {
         height={631}
         width={1115}
         src="/images/worldmap.svg"
-        className="border top-0 left-0 right-0 bottom-0  h-full w-full"
+        className="absolute top-0 left-0 right-0 bottom-0  h-full w-full"
       />
       <div className="font-bold text-3xl md:text-4xl">Contact Us</div>
       <div className="text-lg mt-1 md:text-xl text-center">
