@@ -11,7 +11,7 @@ export default function Home() {
     <>
     <Image
         src="/images/for-sale.png"
-        alt="Image description"
+        alt="for sale"
         width={200}
         height={200}
         onClick={handleWhatsAppClick}

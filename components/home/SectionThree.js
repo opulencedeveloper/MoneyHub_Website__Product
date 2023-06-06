@@ -6,6 +6,7 @@ const SectionThree = () => {
       <Image
         height={631}
         width={1115}
+        alt="world map"
         src="/images/worldmap.svg"
         className="absolute top-0 left-0 right-0 bottom-0  h-full w-full"
       />

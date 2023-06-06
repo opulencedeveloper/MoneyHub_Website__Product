@@ -64,6 +64,7 @@ const SectionOne = () => {
               <div className={margin} key={index}>
                 <Image
                   src={`/images/${card}.svg`}
+                  priority
                   alt="cards images"
                   className="h-auto w-auto"
                   height={319.45}
