@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/router";
+
 import Portal from "../UI/Portal";
 import MobileNavigation from "./MobileNavigation";
-import { useRouter } from "next/router";
+import handleWhatsAppClick from "@/helpers/whatsapp";
 
 const linkContent = [
   { title: "Home", link: "/" },
@@ -14,9 +17,9 @@ const linkContent = [
 let navAnimationClass = "";
 
 const MainNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const activeLink = router.pathname; 
+  const activeLink = router.pathname;
 
   const toggleDrawer = () => {
     if (isOpen) {
@@ -32,7 +35,7 @@ const MainNavigation = () => {
     }
   };
   return (
-    <nav className="flex px-5 text-white pt-7 justify-between absolute w-full z-10 md:px-10">
+    <nav className="flex px-5 text-white pt-7 items-center justify-between absolute w-full z-10 md:px-10">
       <Portal>
         <div
           className={`fixed inset-y-0 -left-64 z-50 w-64 shadow-lg transform ${
@@ -51,21 +54,32 @@ const MainNavigation = () => {
       <div className="hidden lg:flex items-center space-x-14 ml-32 ">
         {linkContent.map((content, index) => (
           <div className="flex flex-col items-center" key={index}>
-            <Link className="text-xl" href={content.link}>
-              {content.title}
-            </Link>
-           { (activeLink === content.link) && <Image
-              src="/images/icon/underline.svg"
-              alt="underline-icon"
-              className="w-14 h-2"
-              width={14}
-              height={2}
-            />}
+            {
+              <Link
+                className="text-xl"
+                href={content.link}
+                onClick={index === 0 ? null : handleWhatsAppClick}
+              >
+                {content.title}
+              </Link>
+            }
+            {activeLink === content.link && (
+              <Image
+                src="/images/icon/underline.svg"
+                alt="underline-icon"
+                className="w-14 h-2"
+                width={14}
+                height={2}
+              />
+            )}
           </div>
         ))}
       </div>
       <div className="hidden md:flex items-center font-medium text-lg space-x-8">
-        <Link className="border border-secondary text-secondary py-2 px-5" href="/">
+        <Link
+          className="border border-secondary text-secondary py-2 px-5"
+          href="/"
+        >
           {" "}
           Sign In
         </Link>{" "}
@@ -75,14 +89,14 @@ const MainNavigation = () => {
         </Link>
       </div>
       <button
-          className={`${navAnimationClass} block hamburger mt-7 lg:hidden focus:outline-none`}
-          type="button"
-          onClick={toggleDrawer}
-        >
-          <span className="hamburger-top"></span>
-          <span className="hamburger-middle"></span>
-          <span className="hamburger-bottom"></span>
-        </button>
+        className={`${navAnimationClass} block hamburger lg:hidden focus:outline-none`}
+        type="button"
+        onClick={toggleDrawer}
+      >
+        <span className="hamburger-top"></span>
+        <span className="hamburger-middle"></span>
+        <span className="hamburger-bottom"></span>
+      </button>
     </nav>
   );
 };

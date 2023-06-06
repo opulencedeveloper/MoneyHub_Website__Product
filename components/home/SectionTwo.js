@@ -54,7 +54,7 @@ const chartData = [
 
 const SectionTwo = () => {
   return (
-    <section className="px-5 pt-24 pb-10 md:px-10">
+    <section className="px-5 pt-24 pb-10 z-0 md:px-10">
       <div className="font-semibold text-4xl text-center md:text-5xl">
         Why You Should Use
       </div>
@@ -73,18 +73,21 @@ const SectionTwo = () => {
             <div className="font-semibold text-2xl text-secondary3 md:text-3xl">
               {content.subtitle}
             </div>
-            <div className="text-secondary2 text-xl md:text-2xl">{content.content}</div>
+            <div className="text-secondary2 text-xl md:text-2xl">
+              {content.content}
+            </div>
           </div>
         ))}
       </div>
       <div className="relative flex flex-col space-y-8 justify-between mb-64 xl:flex-row xl:space-y-0">
-        
         <div className="space-y-3 pr-auto md:pr-14">
           <div className="text-4xl font-semibold md:text-5xl">
             Monthly reports with statistical results
           </div>
           <div className="text-secondary2 text-xl md:text-2xl">
-          Result are caried out everyday to find out and track income and expenses made by an individual or company as wellas providing finiancal advice for excessive spending.
+            Result are caried out everyday to find out and track income and
+            expenses made by an individual or company as wellas providing
+            finiancal advice for excessive spending.
           </div>
           <div className="pt-8">
             {" "}

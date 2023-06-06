@@ -30,7 +30,7 @@ const Footer = () => {
             height={31}
           />
         </div>
-        <div className="flex ml-5 xl:space-x-52 md:ml-auto">
+        <div className="flex space-x-40 md:ml-auto">
           <div className="space-y-4">
             <div>Services</div>
             <div>Carrer</div>
@@ -59,7 +59,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-500 mt-20 text-sm font-normal text-lg text-center pt-5">
-        Property of <span className="font-bold">opulencedeveloper.com</span> 2023, All Rights Reserved
+        Property of <span className="font-bold">opulencedeveloper.com</span>{" "}
+        2023, All Rights Reserved
       </div>
     </footer>
   );

@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
 import dynamic from "next/dynamic";
+
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const LineGraph = (props) => {
@@ -9,13 +11,12 @@ const LineGraph = (props) => {
   const [options, setOptions] = useState({
     chart: {
       toolbar: {
-        show: false, // Hide the toolbar
+        show: false,
       },
       parentHeightOffset: 0,
     },
     xaxis: {
       title: {
-        // text: "Appointments",
         style: {
           fontFamily: "@apply font-roboto",
           fontWeight: "font-semibold",
@@ -38,7 +39,7 @@ const LineGraph = (props) => {
       ],
     },
     grid: {
-      show: false, // Set show to false to hide the horizontal grid lines
+      show: false,
     },
   });
 
@@ -83,7 +84,6 @@ const LineGraph = (props) => {
         <Chart
           type="line"
           height={194}
-          
           series={series}
           options={chartOptions}
         />

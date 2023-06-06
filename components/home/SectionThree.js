@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SectionThree = () => {
   return (
-    <form className="relative px-6 pt-20 pb-20 mx-5 mt-40 mb-32 flex flex-col items-center text-white rounded-2xl bg-primary md:mx-36">
+    <form className="relative z-0 px-6 pt-20 pb-20 mx-5 mt-40 mb-32 flex flex-col items-center text-white rounded-2xl bg-primary md:mx-36">
       <Image
         height={631}
         width={1115}

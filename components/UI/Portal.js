@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
-const Portal = ({children}) => {
+const Portal = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

@@ -3,10 +3,20 @@ import SectionThree from "@/components/home/SectionThree";
 import SectionTwo from "@/components/home/SectionTwo";
 import Footer from "@/components/layout/Footer";
 import Layout from "@/components/layout/Layout";
+import handleWhatsAppClick from "@/helpers/whatsapp";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
+    <Image
+        src="/images/for-sale.png"
+        alt="Image description"
+        width={200}
+        height={200}
+        onClick={handleWhatsAppClick}
+        className='h-auto w-auto fixed bottom-0 right-10 z-20 cursor-pointer'
+      />
       <Layout>
         <SectionOne />
         <SectionTwo />

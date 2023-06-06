@@ -1,6 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import handleWhatsAppClick from "@/helpers/whatsapp";
 
 const pageContent = [
   {
@@ -28,7 +29,9 @@ const MobileNavigation = (props) => {
 
   return (
     <div className="flex flex-col bg-white h-full ">
-     <h1 className="font-medium text-3xl text-center bg-primary py-10 text-white">Money Hub</h1>
+      <h1 className="font-medium text-3xl text-center bg-primary py-10 text-white">
+        Money Hub
+      </h1>
       <div className="space-y-5 bg-custom pt-5 w-full">
         {pageContent.map((content, index) => {
           const bgColor =
@@ -39,7 +42,7 @@ const MobileNavigation = (props) => {
             <Link
               href={content.link}
               key={index}
-              onClick={toggleDrawer}
+              onClick={index === 0 ? toggleDrawer : handleWhatsAppClick}
               className={`${bgColor} border-ash border-b cursor-pointer flex space-x-3 rounded-tr-md rounded-br-md py-3 pl-6`}
             >
               <p className={`font-semibold ${textColor}`}>{content.title}</p>
@@ -47,16 +50,19 @@ const MobileNavigation = (props) => {
           );
         })}
 
-<div className="flex flex-col items-center font-medium text-lg space-y-5 md:hidden">
-        <Link className="border border-secondary text-secondary py-2 px-5" href="">
-          {" "}
-          Sign In
-        </Link>{" "}
-        <Link href="" className="bg-secondary text-white py-2 px-5">
-          {" "}
-          Sign Up
-        </Link>
-      </div>
+        <div className="flex flex-col items-center font-medium text-lg space-y-5 md:hidden">
+          <Link
+            className="border border-secondary text-secondary py-2 px-5"
+            href=""
+          >
+            {" "}
+            Sign In
+          </Link>{" "}
+          <Link href="" className="bg-secondary text-white py-2 px-5">
+            {" "}
+            Sign Up
+          </Link>
+        </div>
       </div>
     </div>
   );
