@@ -28,7 +28,7 @@ const MobileNavigation = (props) => {
   const { toggleDrawer } = props;
 
   return (
-    <div className="flex flex-col bg-white h-full ">
+    <div className="flex flex-col bg-white h-full lg:hidden">
       <h1 className="font-medium text-3xl text-center bg-primary py-10 text-white">
         Money Hub
       </h1>
