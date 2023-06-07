@@ -1,7 +1,6 @@
 import SectionOne from "@/components/home/SectionOne";
 import SectionThree from "@/components/home/SectionThree";
 import SectionTwo from "@/components/home/SectionTwo";
-import Footer from "@/components/layout/Footer";
 import Layout from "@/components/layout/Layout";
 import handleWhatsAppClick from "@/helpers/whatsapp";
 import Image from "next/image";
@@ -22,7 +21,6 @@ export default function Home() {
         <SectionTwo />
         <SectionThree />
       </Layout>
-      <Footer />
     </>
   );
 }

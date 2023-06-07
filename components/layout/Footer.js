@@ -30,7 +30,7 @@ const Footer = () => {
             height={31}
           />
         </div>
-        <div className="flex space-x-40 md:ml-auto">
+        <div className="flex space-x-4 md:ml-auto">
           <div className="space-y-4">
             <div>Services</div>
             <div>Carrer</div>

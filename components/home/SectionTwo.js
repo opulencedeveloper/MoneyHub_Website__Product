@@ -109,15 +109,15 @@ const SectionTwo = () => {
             height={551}
           />{" "}
         </div>
-        <div className="p-2 absolute w-[100%] left-1/2 transform -bottom-52 -translate-x-1/2 bg-white shadow-4xl w-max md:w-[687px] md:bottom-0">
+        <div className="p-2 absolute w-full  -bottom-52 bg-white shadow-4xl w-full md:-translate-x-1/2 md:transform md:left-1/2 md:w-[687px] md:bottom-0">
           <LineGraph productData={chartData} />
         </div>
       </div>
 
       <div className="flex flex-col space-y-44 justify-between space-x-auto md:flex-row md:space-y-0 md:space-x-5">
-        <div className="w-full flex relative mb-[10rem] md:mb-auto">
+        <div className="w-full flex relative mb-[10rem] lg:mb-auto">
           <div>
-            <div className="absolute right-0 -bottom-[18rem] bg-white p-5 rounded-md shadow-3xl w-full md:w-2/3 md:-bottom-32">
+            <div className="absolute right-0 -bottom-[18rem] bg-white p-5 rounded-md shadow-3xl w-full lg:w-2/3 lg:-bottom-32">
               <div className="flex justify-between w-full items-center mb-5">
                 <div className="text-2xl font-semibold text-secondary3">
                   Latest transaction
