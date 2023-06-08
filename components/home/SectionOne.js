@@ -7,7 +7,7 @@ const profileImages = ["profile1", "profile2", "profile3", "profile4"];
 
 const SectionOne = () => {
   return (
-    <div className="relative flex flex-col pl-5 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 md:pl-10 lg:flex-row lg:space-y-0 ">
+    <div className="relative flex flex-col pb-5 pl-5 pt-36 top-0 z-0 bg-primary w-full h-max text-white space-y-10 md:pt-60 md:pl-10 lg:flex-row lg:space-y-0 ">
       <div className="fixed top-0 right-5 text-white text-xs">
         Site developed by opulencedeveloper
       </div>

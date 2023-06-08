@@ -75,7 +75,7 @@ const MainNavigation = () => {
           </div>
         ))}
       </div>
-      <div className="hidden md:flex items-center pr-5 font-medium text-lg space-x-8">
+      <div className="hidden md:flex items-center pl-5 font-medium text-lg space-x-8">
         <Link
           className="border border-secondary text-secondary py-2 px-5"
           href="/"
