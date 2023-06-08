@@ -43,7 +43,7 @@ const SectionOne = () => {
             20,000 Active users
           </div>
         </div>
-        <div className="flex font-medium space-x-5">
+        <div className="flex pl-5 font-medium space-x-5">
           <Link href="/" className="py-3 px-6 text-lg bg-secondary md:text-xl">
             Get Started
           </Link>
